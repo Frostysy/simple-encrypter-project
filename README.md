@@ -1,4 +1,4 @@
-# simple-encrypter-project
+# Simple Encrypter
 
 Programm, mis analüüsib kasutaja esialgset parooli, annab soovitusi ning seejärel krüpteerib antud parooli kindla algoritmi järgi ja salvestab krüpteeritud parooli kindlasse faili. Seejärel loob eraldi võtmete faili ning loob sinna sisse antud paroolile 64 tähemärgi pikkuse "võtme", mida läheb hiljem vaja, et esialgne parool dekrüpteerida.
 
