@@ -1,2 +1,0 @@
-def krüpteeri(password, võti):
-    ""

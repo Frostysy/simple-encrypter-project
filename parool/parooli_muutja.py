@@ -4,7 +4,7 @@ from parool.hindaja import hindaja
 def parooli_muutja(hinne, algne_parool):
     while True:
 
-        if hinne > 1:
+        if hinne >= 1:
             input_kinnitus = str(
                 input("Lähtudes hoiatustest, kas soovid oma parooli muuta | (y / n): ")).lower()
 

@@ -1,10 +1,12 @@
 import secrets
 from time import sleep
+import string
+
+tähestik = string.ascii_letters + string.digits + \
+    string.punctuation + "õäöüÕÄÖÜšžŠŽ€£"
 
 
 def loo_võti():
-
-    tähestik = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
 
     võti = ""
 

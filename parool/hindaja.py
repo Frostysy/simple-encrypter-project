@@ -2,6 +2,7 @@
 Infoallikad: 
             https://www.staysafeonline.org/articles/passwords
 """
+import string
 
 
 def hindaja(password):
@@ -13,26 +14,20 @@ def hindaja(password):
         skoor += 1
 
     # Tuvasta, kas paroolis esineb sümboleid
-    sümbolid = ["!", "#", "€", "%", "&", "/", "=", "?", "@", "£", "$"]
-    sümbolid_password = []
+    sümbolid = string.punctuation + "€£"
 
-    for i in sümbolid:
-        for j in password:
-            if j == i:
-                sümbolid_password.append(i)
-
-    if len(sümbolid_password) == 0:
+    for märk in password:
+        if märk in sümbolid:
+            break
+    else:
         print("⚠️ Salasõna ei sisalda ühtegi sümbolit!")
         skoor += 1
 
     # Tuvasta, kas paroolis esineb numbreid või kas parool ainult koosnebgi numbritest
     nr_lugeja = 0
     for i in password:
-        try:
-            arv = int(i)
+        if i.isdecimal():
             nr_lugeja += 1
-        except:
-            continue
 
     if nr_lugeja == 0:
         print("⚠️ Salasõna ei sisalda ühtegi numbrit!")
