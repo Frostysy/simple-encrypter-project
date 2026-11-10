@@ -3,6 +3,7 @@ from time import sleep
 
 
 def krüpteeri(password, key):
+    """Seob parooli ja võtme iga tähe indexid ning leiab tähestikust uue vastava tähe sellele"""
 
     krüpteeritud_parool = ""
 

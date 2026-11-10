@@ -3,6 +3,7 @@ from time import sleep
 
 
 def dekrüpteeri(encrypted_pass, key):
+    """Otsib tähestikust vastava võtme ja krüpteeritud parooli indexi abil üles parooli originaaltähe"""
     originaal_parool = ""
 
     for i in range(len(encrypted_pass)):

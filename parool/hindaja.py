@@ -1,11 +1,8 @@
-"""
-Infoallikad: 
-            https://www.staysafeonline.org/articles/passwords
-"""
 import string
 
 
 def hindaja(password):
+    """Hindab kasutaja sisestatud parooli pikkust ja sisu ning väljastab ohuskoori"""
     skoor = 0
 
     # Hinda parooli pikkust

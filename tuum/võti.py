@@ -7,6 +7,7 @@ tähestik = string.ascii_letters + string.digits + \
 
 
 def loo_võti():
+    """Loob suvalise 64 tähemärgi pikkuse stringi, lähtudes tähestikust"""
 
     võti = ""
 

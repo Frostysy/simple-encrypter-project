@@ -2,6 +2,7 @@ from parool.hindaja import hindaja
 
 
 def parooli_muutja(hinne, algne_parool):
+    """Võimaldab kasutajal oma parooli muuta enne krüpteerimist"""
     while True:
 
         if hinne >= 1:
