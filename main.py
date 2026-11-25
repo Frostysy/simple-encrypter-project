@@ -14,7 +14,12 @@ while True:
         break
 
 
-parool = parooli_muutja(hindaja(input_pass), input_pass)
+skoor, hoiatused = hindaja(input_pass)
+
+for hoiatus in hoiatused:
+    print(hoiatus)
+
+parool = parooli_muutja(skoor, input_pass)
 
 
 while True:

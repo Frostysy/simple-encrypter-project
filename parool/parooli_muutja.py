@@ -11,7 +11,7 @@ def parooli_muutja(hinne, algne_parool):
             if input_kinnitus == "y" or input_kinnitus == "yes":
                 input_pass = str(input("Sisesta uus parool: "))
 
-                uus_hinne = hindaja(input_pass)
+                uus_hinne = hindaja(input_pass)[0]
 
                 if uus_hinne == 0:
                     return input_pass
