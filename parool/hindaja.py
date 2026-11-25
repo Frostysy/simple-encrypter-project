@@ -4,10 +4,11 @@ import string
 def hindaja(password):
     """Hindab kasutaja sisestatud parooli pikkust ja sisu ning väljastab ohuskoori"""
     skoor = 0
+    hoiatused = []
 
     # Hinda parooli pikkust
     if len(password) < 16:
-        print("⚠️ Salasõna pikkus võiks olla vähemalt 16 tähemärki!")
+        hoiatused.append("⚠️ Salasõna pikkus võiks olla vähemalt 16 tähemärki!")
         skoor += 1
 
     # Tuvasta, kas paroolis esineb sümboleid
@@ -17,7 +18,7 @@ def hindaja(password):
         if märk in sümbolid:
             break
     else:
-        print("⚠️ Salasõna ei sisalda ühtegi sümbolit!")
+        hoiatused.append("⚠️ Salasõna ei sisalda ühtegi sümbolit!")
         skoor += 1
 
     # Tuvasta, kas paroolis esineb numbreid või kas parool ainult koosnebgi numbritest
@@ -27,10 +28,10 @@ def hindaja(password):
             nr_lugeja += 1
 
     if nr_lugeja == 0:
-        print("⚠️ Salasõna ei sisalda ühtegi numbrit!")
+        hoiatused.append("⚠️ Salasõna ei sisalda ühtegi numbrit!")
         skoor += 1
     if nr_lugeja == len(password):
-        print("⚠️ Salasõna koosneb ainult numbritest!")
+        hoiatused.append("⚠️ Salasõna koosneb ainult numbritest!")
         skoor += 1
 
     # Tuvasta, kas paroolis on nii SUURI kui ka väikeseid tähti
@@ -43,10 +44,10 @@ def hindaja(password):
             väike_lugeja += 1
 
     if väike_lugeja == 0:
-        print("⚠️ Salasõna ei sisalda ühtegi väikest tähte!")
+        hoiatused.append("⚠️ Salasõna ei sisalda ühtegi väikest tähte!")
         skoor += 1
     if suur_lugeja == 0:
-        print("⚠️ Salasõna ei sisalda ühtegi suurt tähte!")
+        hoiatused.append("⚠️ Salasõna ei sisalda ühtegi suurt tähte!")
         skoor += 1
 
-    return skoor
+    return skoor, hoiatused
