@@ -8,6 +8,7 @@ sg.theme("DarkBlue3")
 
 # layout on põhiakna paigutus, 1 rida = 1 element
 layout = [
+    [sg.Text("KRÜPTEERIMINE", font=("Arial", 14, "bold"))],
     [sg.Text("Sisesta oma parool:")],
     [sg.Input(key="-PAROOL-", password_char="*")],
     [sg.Button("Hinda parooli"), sg.Button("Krüpteeri"), sg.Button("Välju")],
@@ -82,7 +83,7 @@ while True:
                 popup_window = sg.Window("Parooli muutmine", popup_layout, modal=True)
 
                 # salvestab valiku
-                vastus, value = popup_window.read()
+                vastus, values = popup_window.read()
 
                 popup_window.close()
 
